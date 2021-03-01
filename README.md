@@ -2,7 +2,7 @@
 For COMS 4995 @ Columbia
 
 
-# Team Members
+## Team Members
 Chris Calloway
 Rahul Sehrawat
 Kelsey Namba
