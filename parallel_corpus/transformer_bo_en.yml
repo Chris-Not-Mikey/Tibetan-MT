@@ -1,13 +1,13 @@
 data:
   corpus_1:
-    path_src: src-train.txt
-    path_tgt: tgt-train.txt
+    path_src: corpus/src-train.txt
+    path_tgt: corpus/tgt-train.txt
   valid:
-    path_src: src-val.txt
-    path_tgt: tgt-val.txt
-src_vocab: run/test/vocab.src
-tgt_vocab: run/test/vocab.tgt
-save_model: model_transformer.bo-en
+    path_src: corpus/src-val.txt
+    path_tgt: corpus/tgt-val.txt
+src_vocab: run/vocab.src
+tgt_vocab: run/vocab.tgt
+save_model: models/model_transformer.bo-en
 save_checkpoint_steps: 10000
 keep_checkpoint: 10
 seed: 3435
