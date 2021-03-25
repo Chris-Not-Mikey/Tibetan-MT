@@ -26,7 +26,7 @@
 %\usepackage{amssymb}  % assumes amsmath package installed
 
 \title{\LARGE \bf
-Tibetan Machine Translation 
+Machine Translation for Tibetan Buddhist Texts
 }
 
 %\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
@@ -74,17 +74,19 @@ Tibetan Machine Translation
 
 \section{PROCEDURE}
 
-\subsection{Preprocessing}
 
-(Chris)
+
+\subsection{Data and Pre-processing}
+
+To train our model, we acquired publicly available English to Tibetan parallel corpuses. The non-profit 84000 provided 80 English to Tibetan parallel texts on their website (citation). All 80 of these texts were expert translations of Indo-Tibtan Buddhist texts. For our model we used all 80 of these provided texts.
+\newline Before using them however, we pre-processed the provided data an a few ways. The provided files from 84000 were in a .tmx file format, a very standard parallel corpus file format. For our approach, we scraped all 80 of the .tmx file of both its English and Tibetan contents and dumped them into two large .txt files. One  .txt file contained the English lines, and the other .txt file contained the Tibetan translation. The total line numbers in the two .txt files were the same since one line in one file corresponding to exactly the same line of translated text in the other file. 
+
+
 
 \subsection{Model Design}
 
 (Jacob)
 
-\section{Data}
-
-(not sure if we need this section, maybe can be merged with another)
 
 \section{Results}
 
@@ -113,8 +115,6 @@ Appendixes should appear before the acknowledgment. (not sure what we even need 
 (Put in all papers from lit review here)
 
 (Chris)
-(Rahul)
-(Kelsey)
 \begin{thebibliography}{99}
 
 
