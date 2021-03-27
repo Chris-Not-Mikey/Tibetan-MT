@@ -70,7 +70,21 @@ Machine Translation for Tibetan Buddhist Texts
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{INTRODUCTION}
 
+
+
 (Kelsey) 
+
+
+\section{ETHICAL CONSIDERATIONS}
+
+Care must be taken when approaching a culturally and spiritually important set of texts for use in a computational domain. To that end we authors acknowledge our place as outsiders of the Buddhist tradition and outline our ethical approach for translating these texts as outsiders.
+
+First, we acknowledge that it would be improper to consider our translations as genuine scripture. No matter what our results are, we authors are not in a qualified position to declare something as an honest translation of a Tibetan Buddhist text. To that end, what we have done is pass our results on to someone who can give a more qualified opinion of the accuracy of our translation an so we asked a Native Tibetan Speaker assess our results. This approach was inspired by Bird's Decolonizing NLP which suggests including a "human in the loop" is a key step in the process to decolonizing NLP research. 
+
+Second, we acknowledge that there are certainly Indo-Tibetan texts that would be inappropriate to translate. These texts, the Tantric (esoteric) texts we understand and meant for a select subset of advanced practitioners and translating these texts for the masses could be spiritually dangerous. Knowing this, we have refrained from including and Tantric texts within our training data.
+
+
+Lastly, we acknowledge this is a tool to help bridge the language gap between practitioners both in and out of the Tibetan culture. We want to emphasize that this is just a tool. We make no claims that this tool will solve or fix the underlying social injustice issues within Tibetan community and diaspora. While we hope this tool can bring the community closer together and aid in prosperity, we make no claims that it will be able to do so. 
 
 \section{PROCEDURE}
 
@@ -78,8 +92,9 @@ Machine Translation for Tibetan Buddhist Texts
 
 \subsection{Data and Pre-processing}
 
-To train our model, we acquired publicly available English to Tibetan parallel corpuses. The non-profit 84000 provided 80 English to Tibetan parallel texts on their website (citation). All 80 of these texts were expert translations of Indo-Tibtan Buddhist texts. For our model we used all 80 of these provided texts.
-\newline Before using them however, we pre-processed the provided data an a few ways. The provided files from 84000 were in a .tmx file format, a very standard parallel corpus file format. For our approach, we scraped all 80 of the .tmx file of both its English and Tibetan contents and dumped them into two large .txt files. One  .txt file contained the English lines, and the other .txt file contained the Tibetan translation. The total line numbers in the two .txt files were the same since one line in one file corresponding to exactly the same line of translated text in the other file. 
+To train our model, we acquired publicly available English to Tibetan parallel corpuses. The non-profit 84000 provided 80 English to Tibetan parallel texts on their website (citation). All 80 of these texts were expert translations of Indo-Tibetan Buddhist texts. For our model we used all 80 of these provided texts.
+
+Before using them however, we pre-processed the provided data an a few ways. The provided files from 84000 were in a .tmx file format, a very standard parallel corpus file format. For our approach, we scraped all 80 of the .tmx file of both its English and Tibetan contents and dumped them into two large .txt files. One  .txt file contained the English lines, and the other .txt file contained the Tibetan translation. The total line numbers in the two .txt files were the same since one line in one file corresponding to exactly the same line of translated text in the other file. 
 
 
 
@@ -104,15 +119,12 @@ To train our model, we acquired publicly available English to Tibetan parallel c
 
 \section*{APPENDIX}
 
-Appendixes should appear before the acknowledgment. (not sure what we even need to put here)
+Appendixes should appear before the acknowledgment. (not sure what we even need to put here ~Chris)
 
 \section*{ACKNOWLEDGMENT}
 
-(Thanks to professors + COMS 4995, etc etc)
+The authors would like to thank Palden Gal for volunteering to read our translated texts. We would also like to thank Smara Muresan, Isabelle Zuagg, and Jonathan Reeve for mentoring this research. Lastly, we would like to thank the 84000 project for providing open source parallel Tibetan corpuses. 
 
-
-
-(Put in all papers from lit review here)
 
 (Chris)
 \begin{thebibliography}{99}
