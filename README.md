@@ -8,6 +8,18 @@ For COMS 4995 @ Columbia
 3. Kelsey Namba
 4. Jacob Atkins
 
+## How to Edit Paper
+
+To edit the paper you will need a LaTeX editor.
+I recommend Overleaf: https://www.overleaf.com
+
+Once on overleaf, select "New Project"
+Create a blank project. If there are any files there just delete them.
+Finally, upload BOTH files from the paper folder above. Compile the LaTeX to make sure everything works.
+Now feel free to edit.
+
+When you are done, PLEASE push to GitHub. Otherwise we will have very serious versioning issues.
+
 
 ### Useful Links
 Progress:
