@@ -77,11 +77,11 @@ Machine Translation for Tibetan Buddhist Texts
 
 \section{ETHICAL CONSIDERATIONS}
 
-Care must be taken when approaching a culturally and spiritually important set of texts for use in a computational domain. To that end we authors acknowledge our place as outsiders of the Buddhist tradition and outline our ethical approach for translating these texts as outsiders.
+Care must be taken when approaching culturally and spiritually important texts for use in a computational domain. To that end we authors acknowledge our place as outsiders of the Buddhist tradition and outline our ethical approach for translating these texts as said outsiders.
 
-First, we acknowledge that it would be improper to consider our translations as genuine scripture. No matter what our results are, we authors are not in a qualified position to declare something as an honest translation of a Tibetan Buddhist text. To that end, what we have done is pass our results on to someone who can give a more qualified opinion of the accuracy of our translation an so we asked a Native Tibetan Speaker assess our results. This approach was inspired by Bird's Decolonizing NLP which suggests including a "human in the loop" is a key step in the process to decolonizing NLP research. 
+First, we acknowledge that it would be improper to consider our translations as genuine scripture. No matter what our results are, we authors are not in a qualified position to declare something as an honest translation of a Tibetan Buddhist text. To that end, what we have done is pass our results on to someone who can give a more qualified opinion of the accuracy of our translation an so we asked a Native Tibetan Speaker who holds a Master's degree in Buddhist theology and philosophy to  assess our results. This approach was inspired by Bird's paper [citation:Decolonizing NLP ] which suggests including a "human in the loop" as a key step in the process to decolonizing NLP research. 
 
-Second, we acknowledge that there are certainly Indo-Tibetan texts that would be inappropriate to translate. These texts, the Tantric (esoteric) texts we understand and meant for a select subset of advanced practitioners and translating these texts for the masses could be spiritually dangerous. Knowing this, we have refrained from including and Tantric texts within our training data.
+Second, we acknowledge that there are certainly Indo-Tibetan texts that would be inappropriate to translate. These texts, namely the Tantric (esoteric) texts we understand are meant for a select subset of advanced practitioners and translating these texts for the masses could be spiritually dangerous. Knowing this, we have refrained from including and Tantric texts within our training data.
 
 
 Lastly, we acknowledge this is a tool to help bridge the language gap between practitioners both in and out of the Tibetan culture. We want to emphasize that this is just a tool. We make no claims that this tool will solve or fix the underlying social injustice issues within Tibetan community and diaspora. While we hope this tool can bring the community closer together and aid in prosperity, we make no claims that it will be able to do so. 
@@ -94,7 +94,10 @@ Lastly, we acknowledge this is a tool to help bridge the language gap between pr
 
 To train our model, we acquired publicly available English to Tibetan parallel corpuses. The non-profit 84000 provided 80 English to Tibetan parallel texts on their website (citation). All 80 of these texts were expert translations of Indo-Tibetan Buddhist texts. For our model we used all 80 of these provided texts.
 
-Before using them however, we pre-processed the provided data an a few ways. The provided files from 84000 were in a .tmx file format, a very standard parallel corpus file format. For our approach, we scraped all 80 of the .tmx file of both its English and Tibetan contents and dumped them into two large .txt files. One  .txt file contained the English lines, and the other .txt file contained the Tibetan translation. The total line numbers in the two .txt files were the same since one line in one file corresponding to exactly the same line of translated text in the other file. 
+Before using 84000's corpuses however, we pre-processed the provided data to meet our model's need. The provided files from 84000 were in a .tmx file format, a very standard parallel corpus file format [citation needed]. 
+For our approach, we scraped all 80 .tmx files for both its English and Tibetan contents and placed them line by line into two large .txt files. One .txt file contained the English lines, and the other .txt file contained the Tibetan translation. We made careful assurance that the lines remained in exactly one to one correspondance with their translations. That is, a newline charcter was used to distinguish two seperate lines of translation, but the same line number in each file corresponds to the exact translation provided by 84000. Therefore, the total line numbers in the two .txt files were necessarily the same since one line in one file corresponding to exactly the same line of translated text in the other file. Two such .txt file was made for each of the 80 .tmx files, a Tibetan and an English .txt file for each. After all 160 .txt files were generated, two single large .txt file was generated by concatenating all the Tibetan .txt files and all the English .txt files. These last two .txt files are what was fed into the model.
+
+TODO: Actually do this/remove following lines. It was not strictly necessary to separate the creation of the large .txt files into the smaller components. However, giving the limited data we had this method proved useful to see how much individual texts contributed to the model (ie by elminating some texts in some runs). 
 
 
 
@@ -163,3 +166,4 @@ The authors would like to thank Palden Gal for volunteering to read our translat
 
 
 \end{document}
+
