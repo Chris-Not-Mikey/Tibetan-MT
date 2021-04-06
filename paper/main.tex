@@ -78,12 +78,12 @@ Our project aims to increase the accessibility of Tibetan religious texts by tra
 
 Care must be taken when approaching culturally and spiritually important texts for use in a computational domain. To that end we authors acknowledge our place as outsiders of the Buddhist tradition and outline our ethical approach for translating these texts as said outsiders.
 
-First, we acknowledge that it would be improper to consider our translations as genuine sutras. No matter what our results are, we authors are not in a qualified position to declare something as an honest translation of a Tibetan Buddhist text. To that end, what we have done is pass our results on to someone who can give a more qualified opinion of the accuracy of our translation an so we asked a Native Tibetan Speaker who holds a Master's degree in Buddhist theology and philosophy to  assess our results. This approach was inspired by Bird's paper [citation:Decolonizing NLP ] which suggests including a "human in the loop" as a key step in the process to decolonizing NLP research. 
+First, we acknowledge that it would be improper to consider our translations as genuine sutras. No matter what our results are, we authors are not in a qualified position to declare something as an honest translation of a Tibetan Buddhist text. To that end, we have instead given our translations to someone who can give a more qualified opinion of the accuracy of our translation. In this case, we asked a Native Tibetan Speaker who holds a Master's degree in Buddhist theology and philosophy and a current PhD candidate in Tibetan History to  assess our results. This approach to invite someone directly in the Tibetan community to assess our results was inspired by Bird's paper \cite{c7} which suggests including a "human in the loop" as a key step in the process to decolonizing NLP research. 
 
-Second, we acknowledge that there are certainly Indo-Tibetan texts that would be inappropriate to translate. These texts, namely the Tantric (esoteric) texts we understand are meant for a select subset of advanced practitioners and translating these texts for the masses could be spiritually dangerous. Knowing this, we have refrained from including and Tantric texts within our training data.
+Second, we acknowledge that there are certainly Indo-Tibetan texts that would be inappropriate to translate. These texts, namely the Tantric (esoteric) texts, we understand are meant for a select subset of advanced practitioners and translating these texts for the masses could be spiritually dangerous. Knowing this, we have refrained from including and Tantric texts within our training data.
 
 
-Lastly, we acknowledge this is a tool to help bridge the language gap between practitioners both in and out of the Tibetan culture. We want to emphasize that this is just a tool. We make no claims that this tool will solve or fix the underlying social injustice issues within Tibetan community and diaspora. While we hope this tool can bring the community closer together and aid in prosperity, we make no claims that it will be able to do so. 
+Lastly, we acknowledge this is a tool to help bridge the language gap between practitioners both in and out of the Tibetan culture. We authors want to emphasize that this is just a tool. We make no claims that this tool will solve or fix the underlying social injustice issues within Tibetan community and diaspora. While we hope this tool can bring the community closer together and aid in prosperity, we make no claims that it will be able to do so. 
 
 \section{PROCEDURE}
 
@@ -91,12 +91,12 @@ Lastly, we acknowledge this is a tool to help bridge the language gap between pr
 
 \subsection{Data and Pre-processing}
 
-To train our model, we acquired publicly available English to Tibetan parallel corpuses. The non-profit 84000 provided 80 English to Tibetan parallel texts on their website (citation). All 80 of these texts were expert translations of Indo-Tibetan Buddhist texts. For our model we used all 80 of these provided texts.
+To train our model, we acquired publicly available English to Tibetan parallel corpuses. The non-profit 84000 provided 80 English to Tibetan parallel texts on their website \cite{c8}. All 80 of these texts were expert translations of Indo-Tibetan Buddhist texts. For our model we used all 80 of these provided texts.
 
-Before using 84000's corpuses however, we pre-processed the provided data to meet our model's need. The provided files from 84000 were in a .tmx file format, a very standard parallel corpus file format [citation needed]. 
-For our approach, we scraped all 80 .tmx files for both its English and Tibetan contents and placed them line by line into two large .txt files. One .txt file contained the English lines, and the other .txt file contained the Tibetan translation. We made careful assurance that the lines remained in exactly one to one correspondance with their translations. That is, a newline charcter was used to distinguish two seperate lines of translation, but the same line number in each file corresponds to the exact translation provided by 84000. Therefore, the total line numbers in the two .txt files were necessarily the same since one line in one file corresponding to exactly the same line of translated text in the other file. Two such .txt file was made for each of the 80 .tmx files, a Tibetan and an English .txt file for each. After all 160 .txt files were generated, two single large .txt file was generated by concatenating all the Tibetan .txt files and all the English .txt files. These last two .txt files are what was fed into the model.
+Before using 84000's corpuses however, we pre-processed the provided data to meet our model's need. The provided files from 84000 were in a .tmx file format, a very standard parallel corpus file format \cite{c9}. 
+For our approach, we scraped all 80 .tmx files for both its English and Tibetan contents and placed them line by line into two large .txt files. One .txt file contained the English lines, and the other .txt file contained the Tibetan translation. We made careful assurance that the lines remained in exactly one to one correspondence with their translations. That is, a newline character was used to distinguish two separate lines of translation, but the same line number in each file corresponds to the exact translation provided by 84000. Therefore, the total line numbers in the two .txt files were necessarily the same since one line in one file corresponding to exactly the same line of translated text in the other file. Two such .txt file were made for each of the 80 .tmx files, a Tibetan and an English .txt file for each. After all 160 .txt files were generated, two single large .txt file was generated by concatenating all the Tibetan .txt files and all the English .txt files. These last two .txt files are what was fed into the model.
 
-TODO: Actually do this/remove following lines. It was not strictly necessary to separate the creation of the large .txt files into the smaller components. However, giving the limited data we had this method proved useful to see how much individual texts contributed to the model (ie by elminating some texts in some runs). 
+TODO: Actually do this/remove following lines. It was not strictly necessary to separate the creation of the large .txt files into the smaller components. However, giving the limited data we had this method proved useful to see how much individual texts contributed to the model (ie by eliminating some texts in some runs). 
 
 
 
@@ -164,7 +164,13 @@ The authors would like to thank Palden Gal for volunteering to read our translat
 \bibitem{c6} Orna Almogi, Lena Dankin, Nachum Dershowitz, Lior Wolf. A Hackathon for Classical Tibetan.Journal of Data Mining and Digital Humanities, Episciences.org, 2019, Special Issue on Computer-Aided Processing of Intertextuality in Ancient Languages. hal-01371751v3
 
 
+\bibitem{c7} Bird, S. (2020). Decolonising Speech and Language Technology. Proceedings of the 28th International Conference on Computational Linguistics (COLING 2020), 3504–3519.
 
+
+\bibitem{c8} 84000 Project (2021). What We Do. https://84000.co/about/what-we-do
+
+
+\bibitem{c9} Coverpages (1997). TMX Format. http://xml.coverpages.org/tmxSpec971212.html
 
 
 
