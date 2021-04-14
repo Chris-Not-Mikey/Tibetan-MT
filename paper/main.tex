@@ -149,7 +149,11 @@ We used four different metrics to evaluate our results: accuracy, predicted scor
 
 \end{tabular}\\
 
-(Jacob)
+\par
+Our six layer transformer model with switch out was unsuccessful at translating religious tibetan to english. The translated output does not match closely enough in either pure accuracy or in the meaning of the passage to be useful in translating religious tibetan texts to english. \par
+While superficially, the perplexity appears to demonstrate a strong model, further investigation demonstrates that the low perplexity is a sign of inaccuracy. Perplexity measures the number of possible words that a model could predict for any given sentence. A higher perplexity indicates higher uncertainty. However, the low BLEU score, which measures the quality of the machine translation, has already demonstrated that the accuracy is low. This combined with the perplexity shows the models overconfidence in predicting certain phrases. For example, the tibetan phrase །དེ་ནས་བཅོམ་ལྡན་འདས་ལ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་བྱམས་པས་འདི་སྐད་ཅེས་གསོལ་ཏོ། translates to “So the bodhisattva mahāsattva Maitreya asked the Blessed One”, but the top five of the predicted translations all are of the form “The Blessed One then said to the [adj] [proper noun]”. Even though this sentence is wrong, the perplexity is low because the model is confident in the first part of the sentence. This phenomenon is repeated throughout the results. Keyphrases from the Tibetan sentence are interpreted wrongly in the same way, and then the model learns to be confident about its predictions which lowers the perplexity. \par
+The results demonstrate the flaw in the Transformer model using the current parallel Tibetan to English corpuses. Each token in the Tibetan sentence corresponds to an entire phrase in english rather than a separate word. This complicates the translation, and the model learns parts of the phrases quite well. The validation accuracy is relatively high because the transformer model is good at learning parts of these phrases but it is not good at learning entire sentences or stringing together sentences in context which contributes to the low BLEU score. Overall, the model is capable of learning specific phrases well, but fails at the broad task of creating coherent translations from religious tibetan texts to english. 
+
 
 \section{Discussion}
 
