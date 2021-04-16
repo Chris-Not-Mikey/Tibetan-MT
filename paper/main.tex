@@ -133,7 +133,7 @@ It was not strictly necessary to separate the creation of the large .txt files i
 \subsection{Model Design}
 We used a 6 layer Transformer model that used a multi headed attention mechanism and a switchout transform. Each layer of the transformer model can be divided into an encoder and decoder layer. The encoding layer consists first of a self attention layer, an attention aspect which focuses on the encoded sentence, and then outputs to a feed forward layer. The multi part of the multi headed attention means that each head will encode the information in parallel and then the results will be concatenated and passed to the decoder. Figure one demonstrates this process.
 \includegraphics[scale=.4]{Transformer.png}
-\caption{\\Figure 1: Overview of a Transformer model}
+\caption{\\Figure 1: Overview of a Transformer model \cite{11}}
 \\
 \par
 To prevent overfitting and to augment the data, we added in a switchout transform which will randomly switch out words in the source and target sentence. This also has the added advantage of augmenting the data even further which is especially important for our problem as religious Tibetan has a relatively small corpus, around 30 thousand words. We also attempted to use masking, however we found it to be ineffective. Masking hides tokens from the model by replacing the tokens with a <mask> token. Tibetan tokens are not separated in the same way that latin languages separate their tokens. For example,
@@ -207,7 +207,7 @@ The authors would like to thank Palden Gyal for volunteering to read our transla
 
 \bibitem{c10} Ma, Edward. (2019). Data Augmentation in NLP. https://towardsdatascience.com/data-augmentation-in-nlp-2801a34dfc28
 
-
+\bibitem{c11} Doshi, Ketan (2021). Transformers Explained Visually (Part 3): Multi-head Attention, deep dive. https://towardsdatascience.com/transformers-explained-visually-part-3-multi-head-attention-deep-dive-1c1ff1024853
 
 
 \end{thebibliography}
